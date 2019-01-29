@@ -4,4 +4,8 @@ test('foo test', async function (assert) {
   setupOnerror(function() {});
   setupOnerror(() => {});
   setupOnerror(fn);
+
+  setupOnerror(function() {});
+  setupOnerror(() => {});
+  setupOnerror(fn);
 });

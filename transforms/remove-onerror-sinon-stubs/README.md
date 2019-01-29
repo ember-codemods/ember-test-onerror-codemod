@@ -15,7 +15,8 @@ ember-test-onerror-codemod remove-onerror-sinon-stubs path/of/files/ or/some**/*
 ## Input / Output
 
 <!--FIXTURES_TOC_START-->
-* [basic](#basic)
+* [convert-sandbox](#convert-sandbox)
+* [convert-sinon](#convert-sinon)
 <!--FIXTURES_TOC_END-->
 
 <!--FIXTURES_CONTENT_START-->
