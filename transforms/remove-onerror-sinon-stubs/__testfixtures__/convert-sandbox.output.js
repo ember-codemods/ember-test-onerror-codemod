@@ -5,6 +5,10 @@ test('foo test', async function (assert) {
   setupOnerror(() => {});
   setupOnerror(fn);
 
+  sandbox.stub(Ember, 'foo', function() {});
+  sandbox.stub(Ember, 'foo', () => {});
+  sandbox.stub(Ember, 'foo', fn);
+
   setupOnerror(function() {});
   setupOnerror(() => {});
   setupOnerror(fn);
