@@ -15,7 +15,7 @@ ember-test-onerror-codemod remove-onerror-assignments path/of/files/ or/some**/*
 ## Input / Output
 
 <!--FIXTURES_TOC_START-->
-* [basic](#basic)
+* [convert-onerror-assignment](#convert-onerror-assignment)
 <!--FIXTURES_TOC_END-->
 
 <!--FIXTURES_CONTENT_START-->
