@@ -19,6 +19,8 @@ ember-test-onerror-codemod <TRANSFORM NAME> path/of/files/ or/some**/*glob.js
 ## Transforms
 
 <!--TRANSFORMS_START-->
+* [remove-onerror-assignments](transforms/remove-onerror-assignments/README.md)
+* [remove-onerror-sinon-stubs](transforms/remove-onerror-sinon-stubs/README.md)
 <!--TRANSFORMS_END-->
 
 ## Contributing
