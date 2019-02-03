@@ -1,5 +1,5 @@
+import { setupOnerror } from '@ember/test-helpers';
 import { module, test } from 'qunit';
-import { click, setupOnerror } from '@ember/test-helpers';
 
 module('foo', function() {
   test('foo test', async function(assert) {

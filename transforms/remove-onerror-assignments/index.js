@@ -1,4 +1,5 @@
 const { getParser } = require('codemod-cli').jscodeshift;
+const { addImportStatement, writeImportStatements } = require('../utils');
 
 module.exports = function transformer(file, api) {
   const j = getParser(api);
@@ -10,19 +11,24 @@ module.exports = function transformer(file, api) {
     let onError = node.right;
 
     return j.callExpression(j.identifier('setupOnerror'), [onError]);
-  }
+  };
 
-  root.find(j.AssignmentExpression, {
+  let replacements = root.find(j.AssignmentExpression, {
     left: {
       object: {
-        name: 'Ember'
+        name: 'Ember',
       },
       property: {
-        name: 'onerror'
-      }
-    }
-  })
-  .replaceWith(replacer);
+        name: 'onerror',
+      },
+    },
+  });
 
-  return root.toSource();
-}
+  if (replacements.length > 0) {
+    replacements.replaceWith(replacer);
+    addImportStatement(['setupOnerror']);
+    writeImportStatements(j, root);
+  }
+
+  return root.toSource({ quote: 'single' });
+};

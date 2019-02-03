@@ -1,15 +1,20 @@
-test('foo test', async function (assert) {
-  assert.expect(1);
+import { module, test } from 'qunit';
+import { click, setupOnerror } from '@ember/test-helpers';
 
-  setupOnerror(function() {});
-  setupOnerror(() => {});
-  setupOnerror(fn);
+module('foo', function() {
+  test('foo test', async function(assert) {
+    assert.expect(1);
 
-  sandbox.stub(Ember, 'foo', function() {});
-  sandbox.stub(Ember, 'foo', () => {});
-  sandbox.stub(Ember, 'foo', fn);
+    setupOnerror(function() {});
+    setupOnerror(() => {});
+    setupOnerror(fn);
 
-  setupOnerror(function() {});
-  setupOnerror(() => {});
-  setupOnerror(fn);
+    sandbox.stub(Ember, 'foo', function() {});
+    sandbox.stub(Ember, 'foo', () => {});
+    sandbox.stub(Ember, 'foo', fn);
+
+    setupOnerror(function() {});
+    setupOnerror(() => {});
+    setupOnerror(fn);
+  });
 });
