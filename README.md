@@ -1,6 +1,6 @@
 # ember-test-onerror-codemod
 
-[![Build Status](https://secure.travis-ci.org/ember-codemods/ember-test-onerror-codemod.svg?branch=master)](http://travis-ci.org/ember-codemods/ember-test-onerror-codemod)
+[![Build Status](https://secure.travis-ci.com/ember-codemods/ember-test-onerror-codemod.svg?branch=master)](http://travis-ci.com/ember-codemods/ember-test-onerror-codemod)
 [![npm version](https://badge.fury.io/js/ember-test-onerror-codemod.svg)](https://badge.fury.io/js/ember-test-onerror-codemod)
 
 A collection of codemod's for ember-test-onerror-codemod.
