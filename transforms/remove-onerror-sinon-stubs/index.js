@@ -4,6 +4,7 @@ const { addImportStatement, writeImportStatements } = require('../utils');
 module.exports = function transformer(file, api) {
   const j = getParser(api);
   const root = j(file.source);
+  let requiresImport = false;
 
   const replacer = path => {
     let node = path.node;
@@ -15,6 +16,7 @@ module.exports = function transformer(file, api) {
       return node;
     }
 
+    requiresImport = true;
     return j.callExpression(j.identifier('setupOnerror'), [onErrorFn]);
   };
 
@@ -33,8 +35,11 @@ module.exports = function transformer(file, api) {
 
   if (replacements.length > 0) {
     replacements.replaceWith(replacer);
-    addImportStatement(['setupOnerror']);
-    writeImportStatements(j, root);
+
+    if (requiresImport) {
+      addImportStatement(['setupOnerror']);
+      writeImportStatements(j, root);
+    }
   }
 
   return root.toSource({ quote: 'single' });
