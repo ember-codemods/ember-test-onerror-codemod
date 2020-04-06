@@ -13,7 +13,7 @@
     "codemod-cli": "^0.2.11"
   },
   "devDependencies": {
-    "jest": "^25.2.6"
+    "jest": "^25.2.7"
   },
   "jest": {
     "testEnvironment": "node"
