@@ -10,7 +10,7 @@
     "codemod-cli"
   ],
   "dependencies": {
-    "codemod-cli": "^0.2.11"
+    "codemod-cli": "^3.0.0"
   },
   "devDependencies": {
     "jest": "^26.6.1"
